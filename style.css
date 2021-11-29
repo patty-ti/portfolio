@@ -5,6 +5,81 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --font-primary: "Baloo 2", serif;
+    --font-secundary: "Josefin Slab", serif;
+    --font-action: "Mulish", serif;
+}
+
+.hamburguer {
+    /*background-color: bisque;*/
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.show-menu .hamburguer {
+    right: 16rem;
+}
+
+.line {
+    width: 100%;
+    height: .1rem;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 1px #000;
+    transition: transform 0.9s;
+}
+
+.show-menu #line2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #line1 {
+    transform: rotate(45deg) translate(.3rem, .30rem);
+}
+
+.show-menu #line3 {
+    transform: rotate(-45deg) translate(.3rem, -.53rem);
+}
+
+.hamburguer span {
+    position: absolute;
+    left: 3rem;
+    height: 2rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #692e92;
+    color: #fff;
+    font-family: var(--font-action);
+    opacity: 0;
+}
+
+.hamburguer span::before {
+    content: "";
+    position: absolute;
+    border-right: .7rem solid #692e92;
+    border-top: .8rem solid transparent;
+    border-left: .7rem solid transparent;
+    border-bottom: .8rem solid transparent;
+    left: -1.3rem;
+}
+
+.show-menu .hamburguer:hover span {
+    opacity: 1;
 }
 
 header{
@@ -47,7 +122,7 @@ header{
 .banner h1{
     color: #ffff;
     font-size: 3.5rem;
-    font-family: "Baloo 2", serif;
+    font-family: var(--font-primary);
     font-weight: 200;
     line-height: 3.5rem;
     text-shadow: .3rem .3rem 2px rgba(0, 0, 0, .5);
@@ -57,7 +132,7 @@ header{
 }
 
 .banner p{
-    font-family: "Josefin Slab", serif ;
+    font-family: var(--font-secundary);
     font-size: 2.5rem;
     color: #ffff;
     text-shadow: .3rem .3rem 2px rgba(0, 0, 0, .5);
@@ -67,7 +142,7 @@ header{
 }
 
 .banner button{
-    font-family: "Mulish", serif;
+    font-family: var(--font-action);
     color: #ffff;
     font-size: 0.9rem;
     letter-spacing: .1rem;
@@ -96,4 +171,66 @@ header{
         transform: translateY(0) rotate(0);
         opacity: 1;
     }
+}
+
+.sidebar {
+    width: 20rem;
+    height: 100vh;
+    background-color: rgba(255,255,255,0.8);
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all 0.9s;
+}
+
+.show-menu .sidebar {
+    right: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item {
+    text-align: center;
+    color: #753a88;
+    margin-bottom: .5rem;
+}
+
+.menu-link {
+    font-family: var(--font-action);
+    color: rgb(107, 106, 106);
+    font-size: 1.8rem;
+    transition: color 0.8s;
+}
+
+.menu-link:hover {
+    color: #692e92;
+    text-shadow: .3rem .3rem 1px rgba(0, 0, 0, .1);
+}
+
+.social-media {
+    /*background-color: red;*/
+    position: absolute;    
+    bottom: 2rem;    
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-media i {
+    color: rgb(155, 155, 155);
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    transition: color 0.8s;
+}
+
+.social-media i:hover {
+    color: #692e92;
 }

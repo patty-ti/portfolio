@@ -13,6 +13,6 @@ O controle das tarefas do projeto serão feitas diretamente no GitHub.
 - :beetle: Correção de Bug
 - :checkered_flag: Release
 
-### Autora
+### Autoria
 
 Desenvolvido por Patty Rodrigues

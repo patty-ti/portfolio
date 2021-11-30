@@ -323,3 +323,95 @@ header{
     object-fit: cover;
     width: 100%;
 }
+/*Cards Projetos*/
+.projetos {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.card {
+    width: 18rem;
+    height: 24rem;
+    position: relative;
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    border-radius: .5rem;
+}
+
+.card-img-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    opacity: .8;
+    transition: opacity .3s;
+}
+
+.card:hover .card-img-wrapper img {
+    opacity: .4;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    text-shadow: 0.4rem 0.2rem 0.3rem rgba(0, 0, 0, .6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+
+.card-info h2 {
+    font-family: var(--font-primary);
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: rgb(233, 233, 240);
+}
+
+.card-info h3 {
+    font-family: var(--font-secundary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #7a02cf;
+    margin-bottom: 1rem;
+}
+
+.card-info p {
+    font-family: var(--font-secundary);
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(240, 238, 238);
+    margin-bottom: 2rem;
+}
+
+.card-info button {
+    width: 8rem;
+    height: 2rem;
+    font-family: var(--font-action);
+    font-size: .8rem;
+    color: #fff;
+    border-radius: .6rem;
+    border: none;
+    background-color: purple;
+    background: -webkit-linear-gradient(to right, #cc2b5e, #753a88);  
+    background: linear-gradient(to right, #cc2b5e, #753a88);
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
+    
+}
+
+.card-info button:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+.card:hover .card-info {
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
+

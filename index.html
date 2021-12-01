@@ -195,6 +195,42 @@
                 </div>
             </div>
         </section>
+
+        <section class="sessao-orcamento">
+            <div class="orcamento-wrapper">
+                <h1>Orçamento</h1>
+                <form action="">
+                    <label for="qtde">Quantidade de Páginas:</label>
+                    <input type="number" min="1" name="qtde" id="qtde">
+                    <label for="js">Linguagem do Projeto:</label>
+                    <div class="linguagem">
+                        <div>                    
+                            <input type="checkbox" name="js" id="js">
+                            <label for="js">JavaScript</label>                       
+                        </div>
+                        <div>
+                            <input type="checkbox" name="js" id="js">
+                            <label for="js">Outra</label> 
+                        </div>
+                    </div>
+                    <label>Layout do Projeto:</label>
+                    <div class="group-layout">
+                        <div>
+                            <input type="radio" name="layout" id="layout-yes">
+                            <label for="layout-yes">Cotar Projeto com Layout</label>
+                        </div> 
+                        <div>
+                            <input type="radio" name="layout" id="layout-no">
+                            <label for="layout-no">Cotar Projeto sem Layout</label>
+                        </div> 
+                    </div>
+                    <label for="prazo">Prazo de Entrega:</label>
+                    <input type="range" name="prazo" id="prazo">
+                    <button class="botao-orcamento" type="submit">Cotar Projeto</button>
+                </form>
+            </div>
+        </section>
+
     </div>
 </body>
 <script src="script.js"></script>

@@ -16,3 +16,7 @@ O controle das tarefas do projeto serão feitas diretamente no GitHub.
 ### Autoria
 
 Desenvolvido por Patty Rodrigues
+
+### Para visualizar o projeto acesse
+
+https://portfoliopattyrodrigues.netlify.app

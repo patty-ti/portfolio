@@ -9,6 +9,10 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --font-primary: "Baloo 2", serif;
     --font-secundary: "Josefin Slab", serif;
@@ -160,7 +164,9 @@ header{
 }
 
 .banner button:hover{
-    opacity: 0.7;
+    opacity: .8;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
 }
 
 @keyframes moveText {
@@ -181,6 +187,7 @@ header{
     top: 0;
     right: -20rem;
     transition: all 0.9s;
+    
 }
 
 .show-menu .sidebar {
@@ -231,8 +238,18 @@ header{
     transition: color 0.8s;
 }
 
+.social-media button {
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    transition: color 0.8s;
+    border-radius: none;
+}
+
 .social-media i:hover {
-    color: #692e92;
+    color: #9b0e83;
 }
 
 /*Grid Layout Conhecimentos*/
@@ -351,7 +368,7 @@ header{
     height: 100%;
     border-radius: .5rem;
     opacity: .8;
-    transition: opacity .3s;
+    transition: opacity .3s;    
 }
 
 .card:hover .card-img-wrapper img {
@@ -409,6 +426,7 @@ header{
 .card-info button:hover {
     opacity: .8;
     cursor: pointer;
+    color: rgb(0, 0, 0);
 }
 
 .card:hover .card-info {
@@ -591,7 +609,7 @@ header{
 }
 
 .botao-orcamento {
-    width: 10rem;
+    width: 16rem;
     height: 2.9rem;
     margin-top: 1rem;
     font-family: var(--font-action);
@@ -611,4 +629,65 @@ header{
     opacity: .8;
     cursor: pointer;
     color: rgb(0, 0, 0);
+}
+/*Formatação Footer*/
+footer {
+    width: 100%;
+    height: 7rem;
+    background-color: #030202;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-content {
+    width: 90%;
+    display: flex;    
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-content p {
+    font-family: var(--font-secundary);
+    font-size: 1.1rem;
+    color: #949196;
+}
+
+.footer-content button {   
+    font-family: var(--font-secundary);    
+    font-size: 1.4rem;
+    border-radius: .3rem;
+    color: #949196; 
+    display: flex;    
+    cursor: pointer;
+}
+
+.footer-content button:hover  {
+    background-color: purple;
+    background: -webkit-linear-gradient(to right, #cc2b5e, #753a88);  
+    background: linear-gradient(to right, #cc2b5e, #753a88);
+}
+/*Formatação Link Voltar ao Topo*/
+#voltar-topo {
+    position: fixed;
+    right: 4rem;
+    margin-bottom: 3rem;
+    bottom: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #ffff;        
+    background-color: purple;
+    background: -webkit-linear-gradient(to right, #cc2b5e, #753a88);  
+    background: linear-gradient(to right, #cc2b5e, #753a88);
+    box-shadow: 0 .1rem .8rem rgba(38, 40, 41, 0.9);
+    border-radius: .5rem;
+    cursor: pointer;    
 }

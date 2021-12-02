@@ -22,14 +22,14 @@
             <span>fechar</span>
         </div>
 
-        <header>
+        <header id="home">
             <div class="img-wrapper">
                 <img src="imagens/developer.jpg" alt="">
             </div>
             <div class="banner">
-                <h1>Web Developer Front-End</h1>
+                <h1> Developer Front-End</h1>
                 <p>Patty Rodrigues</p>
-                <button>Saiba Mais</button>
+                <button onclick="window.open('https://www.linkedin.com/in/patriciarodriguessilvaprs/')">Saiba Mais</button>
             </div>
         </header>
 
@@ -37,20 +37,20 @@
             <nav>
                 <ul class="menu">
                     <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Conhecimentos</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Projetos</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Contato</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Orçamento</a></li>
+                    <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimentos</a></li>
+                    <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
+                    <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
+                    <li class="menu-item"><a href="#orcamento" class="menu-link">Orçamento</a></li>
                 </ul>
             </nav>
             <div class="social-media">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github-square"></i></a>
-                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                <button onclick="window.open('https://www.linkedin.com/in/patriciarodriguessilvaprs/')"><i class="fab fa-linkedin"></i></button>
+                <button onclick="window.open('https://github.com/patty-ti')"><i class="fab fa-github-square"></i></button>
+                <button onclick="window.open('https://www.instagram.com/patty.rodriguess')"><i class="fab fa-instagram-square"></i></button>
             </div>
         </aside>
 
-        <section class="sessao-conhecimentos">
+        <section class="sessao-conhecimentos" id="conhecimentos">
             <div class="sessao-header">
                 <h1>Conhecimentos</h1>
             </div>
@@ -121,7 +121,7 @@
             </div>
         </section>
         
-        <section class="sessao-projetos">
+        <section class="sessao-projetos" id="projetos">
             <div class="sessao-header">
                 <h1>Projetos</h1>
             </div>
@@ -132,10 +132,10 @@
                         <img src="imagens/projeto1.jpg" alt="imagem do projeto ">
                     </div>
                     <div class="card-info">
-                        <h2>Calculadora</h2>
+                        <h2>LandingPage</h2>
                         <h3>JavaScript</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis repudiandae magnam explicabo hic tenetur laboriosam impedit doloribus ex id ab unde maxime maiores libero, placeat sed illo temporibus porro iure.</p>
-                        <button>Saiba Mais</button>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis repudiandae magnam explicabo hic tenetur laboriosam impedit doloribus ex id ab unde maxime maiores libero, placeat sed illo temporibus porro iure.</p>
+                        <button onclick="window.open('https://github.com/patty-ti/landingpage-VTEX')">Saiba Mais</button>
                     </div>
                 </div>
 
@@ -147,7 +147,7 @@
                         <h2>Calculadora</h2>
                         <h3>JavaScript</h3>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat natus voluptate, perspiciatis alias quo omnis dolorem qui id modi ex delectus ea et sint doloremque dignissimos? Commodi amet totam ad?</p>
-                        <button>Saiba Mais</button>
+                        <button onclick="window.open('https://github.com/patty-ti')">Saiba Mais</button>                        
                     </div>
                 </div>
 
@@ -159,14 +159,14 @@
                         <h2>Page</h2>
                         <h3>JavaScript</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nihil, vel iusto doloribus ea ducimus aliquid eaque dolorem perferendis esse corrupti eos ex fuga necessitatibus, libero deleniti omnis, sint tempore?</p>
-                        <button>Saiba Mais</button>
+                        <button onclick="window.open('https://github.com/patty-ti')">Saiba Mais</button>
                     </div>
                 </div>
             </div>
 
         </section>
 
-        <section class="sessao-contato">
+        <section class="sessao-contato" id="contato">
             <div class="contato-wrapper">
                 <div class="contato-left">
 
@@ -196,7 +196,7 @@
             </div>
         </section>
 
-        <section class="sessao-orcamento">
+        <section class="sessao-orcamento" id="orcamento">
             <div class="orcamento-wrapper">
                 <h1>Orçamento</h1>
                 <form action="">
@@ -205,11 +205,11 @@
                     <label for="js">Linguagem do Projeto:</label>
                     <div class="linguagem">
                         <div>                    
-                            <input type="checkbox" name="js" id="js">
+                            <input type="radio" name="js" id="js">
                             <label for="js">JavaScript</label>                       
                         </div>
                         <div>
-                            <input type="checkbox" name="js" id="js">
+                            <input type="radio" name="js" id="js">
                             <label for="js">Outra</label> 
                         </div>
                     </div>
@@ -225,12 +225,29 @@
                         </div> 
                     </div>
                     <label for="prazo">Prazo de Entrega:</label>
-                    <input type="range" name="prazo" id="prazo">
-                    <button class="botao-orcamento" type="submit">Cotar Projeto</button>
+                    <input type="range" name="prazo" id="prazo" min="1" max="10">
+
+                    <label id="valor">Preço: R$ 0,00</label>
+                    <button class="botao-orcamento" type="submit">Solicitar Projeto</button>
                 </form>
             </div>
         </section>
 
+        <footer>
+            <div class="footer-content">
+                
+                <p>
+                    Copyright &copy; 2021, Todos os direitos reservados - 
+                    Desenvolvido por: Patty Rodrigues
+                </p>                   
+                <button onclick="window.open('https://www.linkedin.com/in/patriciarodriguessilvaprs/')"><i class="fab fa-linkedin"></i></button>
+                <button onclick="window.open('https://github.com/patty-ti')"><i class="fab fa-github-square"></i></button>
+                <button onclick="window.open('https://www.instagram.com/patty.rodriguess')"><i class="fab fa-instagram-square"></i></button>                
+            </div>
+        </footer>
+        <a href="#home" id="voltar-topo">
+            <i class="fas fa-arrow-up"></i>
+        </a>
     </div>
 </body>
 <script src="script.js"></script>
